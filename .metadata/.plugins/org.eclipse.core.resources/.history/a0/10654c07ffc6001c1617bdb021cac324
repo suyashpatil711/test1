@@ -1,0 +1,10 @@
+package com.example.demo;
+
+public class TestClass {
+	private boolean Status;
+ private String UserID;
+ private String EmailID;
+ private int RollNumber;
+ private int numbers[];
+ private char alphabets[];
+}

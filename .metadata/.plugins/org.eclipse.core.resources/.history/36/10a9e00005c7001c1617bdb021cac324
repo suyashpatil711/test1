@@ -1,0 +1,82 @@
+package com.example.demo.Entity;
+
+import java.util.Arrays;
+
+public class Logic {
+	private String d[];
+	private int num[];
+	private char alphabets[];
+	private int countnum=0;
+	private int countchar=0;
+
+	public Logic() {
+		super();
+	}
+
+	public Logic(String[] d, int[] num, char[] alphabets) {
+		super();
+		this.d = d;
+		this.num = num;
+		this.alphabets = alphabets;
+	}
+
+	public Logic(String[] d) {
+		super();
+		this.d = d;
+	}
+
+	public String[] getD() {
+		return d;
+	}
+
+	public int[] getNum() {
+		return num;
+	}
+
+	public void setNum(int[] num) {
+		this.num = num;
+	}
+
+	public char[] getAlphabets() {
+		return alphabets;
+	}
+
+	public void setAlphabets(char[] alphabets) {
+		this.alphabets = alphabets;
+	}
+
+	public void setD(String[] d) {
+		this.d = d;
+	}
+	public void setLogic() {
+		for (int i=0; i<d.length;i++) {
+			char ss=d[i].charAt(i);
+			if(Character.isDigit(ss)) {
+				countnum++;
+			}
+			else
+				countchar++;
+		}
+		
+		int num[]=new int[countnum];
+		char alphabets[]=new char[countchar];
+		for (int i=0; i<d.length;i++) {
+			char ss=d[i].charAt(i);
+			if(Character.isDigit(ss)) {
+				num[i]=Character.getNumericValue(ss);
+			}
+			else
+			{
+				alphabets[i]=ss;
+			}
+		}
+	}
+	
+
+	@Override
+	public String toString() {
+		return "Logic [d=" + Arrays.toString(d) + ", num=" + Arrays.toString(num) + ", alphabets="
+				+ Arrays.toString(alphabets) + "]";
+	}
+	
+}

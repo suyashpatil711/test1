@@ -1,0 +1,24 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.Entity.TestClass;
+
+@RestController
+public class Controller {
+	
+	
+	@PostMapping("/bfhl")
+	public TestClass allUser(@RequestBody TestClass test){
+		
+		TestClass allUser = test;
+		
+		return allUser;
+	}
+
+}
